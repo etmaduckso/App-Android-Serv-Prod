@@ -11,23 +11,25 @@
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/tituloServico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Página de Serviços"
+            android:text="Título do Serviço"
             android:textSize="24sp"
             android:textStyle="bold"/>
-        
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewServicos"
-            android:layout_width="match_parent"
+
+        <TextView
+            android:id="@+id/descricaoServico"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
-        
+            android:text="Descrição do Serviço"
+            android:layout_marginTop="8dp"/>
+
         <Button
-            android:id="@+id/cadastrarServicoButton"
+            android:id="@+id/contratarButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cadastrar Serviço"
+            android:text="Contratar Serviço"
             android:layout_marginTop="16dp"/>
     </LinearLayout>
 </layout>

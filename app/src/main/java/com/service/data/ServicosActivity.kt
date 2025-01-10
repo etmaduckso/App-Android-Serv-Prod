@@ -1,8 +1,9 @@
 package com.service.data
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager // Importação adicionada
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.service.data.databinding.ActivityServicosBinding
 
 class ServicosActivity : AppCompatActivity() {
@@ -32,5 +33,11 @@ class ServicosActivity : AppCompatActivity() {
         // Configurar o Adapter
         val adapter = ServicoAdapter(servicos)
         recyclerView.adapter = adapter
+
+        // Adicionar botão de cadastrar serviço
+        binding.cadastrarServicoButton.setOnClickListener {
+            val intent = Intent(this, CadastroServicoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

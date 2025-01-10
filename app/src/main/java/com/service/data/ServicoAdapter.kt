@@ -1,5 +1,6 @@
 package com.service.data
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,6 +23,14 @@ class ServicoAdapter(private val servicos: List<Servico>) : RecyclerView.Adapter
         val servico = servicos[position]
         holder.nome.text = servico.nome
         holder.descricao.text = servico.descricao
+
+        // Adicionar listener de clique
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, VisualizarServicoActivity::class.java)
+            // Passar dados do serviço, se necessário
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
